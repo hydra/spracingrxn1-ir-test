@@ -7,6 +7,13 @@
 #include "driver/rmt_tx.h"
 #include "robitronic_ir_encoder.h"
 
+// References / Docs / Source /etc:
+// 5.2.1 RMT example code on which this is based - https://github.com/espressif/esp-idf/tree/v5.2.1/examples/peripherals/rmt/led_strip
+// 5.2.1 api docs (with encoder API) - https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/peripherals/rmt.html#rmt-kconfig-options
+// 5.2 release driver source -  https://github.com/espressif/esp-idf/blob/v5.2.1/components/driver/rmt/rmt_tx.c
+// latest RMT driver source - https://github.com/espressif/esp-idf/blob/master/components/esp_driver_rmt/src/rmt_tx.c
+//
+// old 4.4.7 api docs (no encoder API) - https://docs.espressif.com/projects/esp-idf/en/v4.4.7/esp32/api-reference/peripherals/rmt.html
 static const char *TAG = "IR";
 
 #define RMT_IR_RESOLUTION_HZ 10000000 // 10MHz resolution, 1 tick = 0.1us
