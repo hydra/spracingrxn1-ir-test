@@ -12,10 +12,9 @@ static const char *TAG = "IR";
 #define RMT_IR_RESOLUTION_HZ 10000000 // 10MHz resolution, 1 tick = 0.1us
 #define RMT_IR_GPIO_NUM      IR_GPIO_PIN
 
-#define EXAMPLE_CODE_DIGITS         4
 #define EXAMPLE_REPEAT_MS           10
-
-static uint8_t ir_code[EXAMPLE_CODE_DIGITS] = {0xDE,0xAD,0xBE,0xEF};
+#define EXAMPLE_CODE_DIGITS         2
+static uint8_t ir_code[EXAMPLE_CODE_DIGITS] = {0x55,0xAA};
 
 void app_main() {
     ESP_LOGI(TAG, "Create RMT TX channel");
