@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "rxn1-ir-test",
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"robitronic_ir_encoder.h": "c"
+		}
+	}
+}
