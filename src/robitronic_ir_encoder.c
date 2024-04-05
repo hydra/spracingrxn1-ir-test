@@ -64,6 +64,7 @@ esp_err_t rmt_new_led_strip_encoder(const led_strip_encoder_config_t *config, rm
     led_encoder->base.del = rmt_del_led_strip_encoder;
     led_encoder->base.reset = rmt_led_strip_encoder_reset;
 
+    // IMPORTANT - the `.duration0` field cannot be 0, if it is then the RMT output terminates immediately with a short IO glitch
     rmt_bytes_encoder_config_t bytes_encoder_config = {
         .bit0 = {
             .level0 = 1,
@@ -72,10 +73,10 @@ esp_err_t rmt_new_led_strip_encoder(const led_strip_encoder_config_t *config, rm
             .duration1 = 8 * config->resolution / 1000000, // T0L=8us
         },
         .bit1 = {
-            .level0 = 1,
-            .duration0 = 0 * config->resolution / 1000000, // T1H=0us
+            .level0 = 0,
+            .duration0 = 5 * config->resolution / 1000000, // T1H=0us
             .level1 = 0,
-            .duration1 = 10 * config->resolution / 1000000, // T1L=10us
+            .duration1 = 5 * config->resolution / 1000000, // T1L=10us
         },
         .flags.msb_first = 1
     };

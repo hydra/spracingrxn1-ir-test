@@ -1,0 +1,1 @@
+This is a short example to test the RMT peripheral is able to drive a MOSFET and IR diode on the RXN1 via the RMT peripheral. 

@@ -21,7 +21,7 @@ static const char *TAG = "IR";
 
 #define EXAMPLE_REPEAT_MS           10
 #define EXAMPLE_CODE_DIGITS         2
-static uint8_t ir_code[EXAMPLE_CODE_DIGITS] = {0x55,0xAA};
+static uint8_t ir_code[EXAMPLE_CODE_DIGITS] = {0x33,0xCC};
 
 void app_main() {
     ESP_LOGI(TAG, "Create RMT TX channel");
