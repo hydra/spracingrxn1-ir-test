@@ -12,6 +12,7 @@
 // 5.2.1 api docs (with encoder API) - https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/peripherals/rmt.html#rmt-kconfig-options
 // 5.2 release driver source -  https://github.com/espressif/esp-idf/blob/v5.2.1/components/driver/rmt/rmt_tx.c
 // latest RMT driver source - https://github.com/espressif/esp-idf/blob/master/components/esp_driver_rmt/src/rmt_tx.c
+// old RMT driver source - https://github.com/espressif/esp-idf/blob/release/v4.4/components/driver/rmt.c
 //
 // old 4.4.7 api docs (no encoder API) - https://docs.espressif.com/projects/esp-idf/en/v4.4.7/esp32/api-reference/peripherals/rmt.html
 static const char *TAG = "IR";
